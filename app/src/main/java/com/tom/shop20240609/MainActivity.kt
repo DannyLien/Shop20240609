@@ -1,5 +1,6 @@
 package com.tom.shop20240609
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -75,7 +76,9 @@ class MainActivity : AppCompatActivity() {
 
     private fun functionClicked(holder: FunctionHolder, position: Int) {
         Log.d(TAG, "functionClicked: $position")
-       
+        when (position) {
+            1 -> startActivity(Intent(this, ContactActivity::class.java))
+        }
     }
 
 
