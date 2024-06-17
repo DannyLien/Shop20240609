@@ -23,12 +23,12 @@ class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     val TAG = MainActivity::class.java.simpleName
     val functions = listOf<String>(
-        "Camera",
-        "Invite friend",
-        "Parking",
+        "Camera",   //0
+        "Invite friend",    //1
+        "Parking",  //2
         "Download coupons",
         "News",
-        "Maps",
+        "Movies", //5
         "A",
         "B",
         "Love You",
@@ -79,6 +79,7 @@ class MainActivity : AppCompatActivity() {
         when (position) {
             1 -> startActivity(Intent(this, ContactActivity::class.java))
             2 -> startActivity(Intent(this, ParkingActivity::class.java))
+            5 -> startActivity(Intent(this, MovieActivity::class.java))
 
         }
     }
